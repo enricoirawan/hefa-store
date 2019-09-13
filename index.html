@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="section-home">
 
 <head>
     <!-- Required meta tags -->
@@ -26,7 +26,7 @@
     <!-- Ini navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand page-scroll" href="#home">
                 <img src="img/logo_small.png" alt="Hefa Store">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -36,16 +36,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-uppercase mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link page-scroll" href="#section-home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link page-scroll" href="#section-category">Category</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Designer</a>
+                        <a class="nav-link page-scroll" href="#section-designer">Designer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link page-scroll" href="#section-about">About</a>
                     </li>
                 </ul>
                 <a href="cart.html" class="nav-link text-white"><img src="img/Group 3.png" alt="my cart" class="mr-2">
@@ -136,10 +136,10 @@
     <!-- Akhir dari brands -->
 
     <!-- fiture -->
-    <section class="features bg-light p-5">
+    <section class="features bg-light p-5" id="section-category">
         <div class="container">
             <div class="row mb-3">
-                <div class="col">
+                <div class="col mb-0">
                     <h3>Special Eid</h3>
                     <p>Promo pakaian cocok untuk lebaran</p>
                 </div>
@@ -236,7 +236,7 @@
     <!-- akhir fiture -->
 
     <!-- Designer -->
-    <section class="designer p-5">
+    <section class="designer p-5" id="section-designer">
         <div class="container">
             <div class="row mb-3">
                 <div class="col">
@@ -348,6 +348,15 @@
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.js"></script>
             <script src="js/all.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+
+            <script type="text/javascript">
+                $(function () {
+                    var scroll = new SmoothScroll('a[href*="#section-"]', {
+                        speed: 1000
+                    })
+                });
+            </script>
 </body>
 
 </html>
